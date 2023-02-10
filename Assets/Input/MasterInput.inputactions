@@ -1,0 +1,114 @@
+{
+    "name": "MasterInput",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "c501ae16-425c-4e17-98f1-e0ced6e89f77",
+            "actions": [
+                {
+                    "name": "Mouse Down",
+                    "type": "Button",
+                    "id": "50d8e58a-2e02-40cd-b13a-e98ec2feffe9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Mouse Drag",
+                    "type": "Value",
+                    "id": "609f5c9e-74f5-4f50-a9ba-a6be1239e018",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b33a1f46-a6f0-4cde-bcff-919ba9e87807",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseTesting",
+                    "action": "Mouse Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44f42726-89c3-40e0-83e0-3469938fa7eb",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseTesting",
+                    "action": "Mouse Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "id": "860e7258-20e0-48a4-b267-60d0caf05ab6",
+            "actions": [
+                {
+                    "name": "PrimaryTouch",
+                    "type": "Button",
+                    "id": "bd0f5596-1ad3-4675-9dc8-440b4566697b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DoubleTap",
+                    "type": "Button",
+                    "id": "298453cb-f162-4915-9f47-279f190c6ee2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a32ff655-934d-4dfb-94aa-e85c271e5077",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Press(pressPoint=1.401298E-45)",
+                    "processors": "",
+                    "groups": "MouseTesting",
+                    "action": "PrimaryTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1abfd246-8db1-4a4c-ae87-6a94a4bb297c",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MouseTesting",
+            "bindingGroup": "MouseTesting",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
